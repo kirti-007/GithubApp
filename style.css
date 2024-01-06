@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    padding-inline: 16px;
+    margin-inline: auto;
+    max-width: 1280px;
+    width: 100%;
+}
+.icon-btn {
+    background-color: var(--surface-variant);
+    min-width: 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-circle);
+    border: 1px solid var(--surface-variant-outline);
+    display: grid;
+    place-items: center;
+    transition: var(--transition-short);
+    transition-property: background-color, border-color;
+  }
+  
+  .icon-btn:where(:hover, :focus-visible):not(:active) {
+    background-color: var(--surface-variant-hover);
+    border-color: var(--surface-variant-outline-hover);
+  }
+  
+  .icon-btn .material-symbols-rounded { color: var(--on-background); }
