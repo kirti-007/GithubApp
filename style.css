@@ -1,30 +1,178 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: whitesmoke;
+  color: black;
+}
+.header{
+  padding: 0.5rem 1rem;
 }
 .container{
-    padding-inline: 16px;
-    margin-inline: auto;
-    max-width: 1280px;
-    width: 100%;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border:2px solid rgb(12, 2, 51);
+  border-radius: 30px;
+
+}
+.text-primary{
+  font-size: 2rem;
+  font-weight: bolder;
+  -webkit-text-fill-color: rgb(12, 2, 51);
+}
+.search-field{
+  background-color: transparent;
+  padding: 0.2rem;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+#searchBox{
+  display: flex;
+  gap: 0.5rem;
+  border: 1px solid black;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
 }
 .icon-btn {
-    background-color: var(--surface-variant);
-    min-width: 48px;
-    width: 48px;
-    height: 48px;
-    border-radius: var(--radius-circle);
-    border: 1px solid var(--surface-variant-outline);
-    display: grid;
-    place-items: center;
-    transition: var(--transition-short);
-    transition-property: background-color, border-color;
-  }
+  background-color: transparent;
+  border: 2px solid black;
+  padding: 0.2rem;
+  border-radius: 20px;
+}
+body .sun-icon{
+  display: none;
+}
+
+#main{
+  width: 25%;
+  border-right: 1px solid black;
+}
+h1{
+  font-size: 1.7rem;
+}
+.card{
+  display: flex;
+  padding: 1rem;
+  font-size: 1rem;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.contain{
+  padding: 2rem 1rem;
+  height: 85vh;
+  display: flex;
+}
+.avatar{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid rgb(12, 2, 51);
+}
+
+.location{
+  display: flex;
+  align-items: center;
+}
+#gitlink{
+  padding: 0.2rem;
   
-  .icon-btn:where(:hover, :focus-visible):not(:active) {
-    background-color: var(--surface-variant-hover);
-    border-color: var(--surface-variant-outline-hover);
-  }
-  
-  .icon-btn .material-symbols-rounded { color: var(--on-background); }
+}
+#gitlinka{
+  border: 1px solid rgb(32, 29, 45);
+  box-shadow: 0 0 2px rgb(12, 2, 51);
+  text-decoration: none;
+  border-radius: 10px;
+  color: black;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  transition: all 0.5s;
+}
+#gitlinka:hover{
+  background-color: black;
+  color: whitesmoke;
+}
+.padd{
+  padding-left: 0.2rem;
+}
+#rightside{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+#rightside p{
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: underline;
+}
+#repositories-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#repositories-container p{
+  font-size: 0.8rem;
+}
+.repo-box{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 32%;
+  height: 20vh;
+  margin: 0.3rem 0.1rem;
+  border-radius: 10px;
+  padding: 0.3rem;
+  box-shadow: 1px 1px 2px black;
+}
+
+.footer{
+  text-align: center;
+  padding-bottom: 0.2rem;
+}
+
+body.dark-theme {
+  background-color: black;
+  color: whitesmoke;
+}
+
+body.dark-theme .moon-icon {
+  display: none; 
+}
+body.dark-theme .sun-icon {
+  display: inline; 
+}
+body.dark-theme .container{
+  border-color: white;
+}
+body.dark-theme .icon-btn{
+  background-color: white;
+}
+body.dark-theme #searchBox{
+  border-color: white;
+  -webkit-text-fill-color: white;
+}
+body.dark-theme .contain{
+  border-color: white;
+}
+body.dark-theme #gitlinka{
+  border-color: white;
+  color: white;
+}
+body.dark-theme #gitlinka:hover{
+  background-color: whitesmoke;
+  color: black;
+}
+body.dark-theme .text-primary{
+  -webkit-text-fill-color: aliceblue;
+}
+body.dark-theme .repo-box{
+  box-shadow: 1px 1px 2px whitesmoke;
+}
