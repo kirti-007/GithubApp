@@ -109,7 +109,7 @@ h1{
   padding-left: 1rem;
 }
 #rightside p{
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -125,7 +125,7 @@ h1{
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
-  width: 32%;
+  width: 48%;
   height: 20vh;
   margin: 0.3rem 0.1rem;
   border-radius: 10px;
@@ -158,6 +158,7 @@ body.dark-theme .icon-btn{
 body.dark-theme #searchBox{
   border-color: white;
   -webkit-text-fill-color: white;
+  caret-color: whitesmoke;
 }
 body.dark-theme .contain{
   border-color: white;
@@ -165,6 +166,9 @@ body.dark-theme .contain{
 body.dark-theme #gitlinka{
   border-color: white;
   color: white;
+}
+body.dark-theme #main{
+  border-color: white;
 }
 body.dark-theme #gitlinka:hover{
   background-color: whitesmoke;
@@ -175,4 +179,52 @@ body.dark-theme .text-primary{
 }
 body.dark-theme .repo-box{
   box-shadow: 1px 1px 2px whitesmoke;
+}
+
+@media (max-width: 1000px) {
+  .avatar{
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 800px) {
+  .contain{
+    flex-direction: column;
+    height: 100%;
+  }
+  #main{
+    width: 100%;
+    border: none;
+  }
+  #rightside{
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px){
+  .repo-box{
+    width: 94%;
+    height: 15vh;
+  }
+  #repositories-container{
+    justify-content: center;
+  }
+  #rightside{
+    padding-left: 0;
+  }
+  .container{
+    flex-direction: column;
+    border: none;
+  }
+  .text-primary{
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .icon-btn{
+    border: none;
+  }
+  body.dark-theme .icon-btn{
+    background-color: transparent;
+    color: whitesmoke;
+  }
 }

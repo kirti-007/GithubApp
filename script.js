@@ -86,7 +86,7 @@ const displayRepositories = (repositories) => {
     repositoriesContainer.innerHTML = ''; 
     const fragment = document.createDocumentFragment(); 
 
-    repositories.slice(0, 9).forEach(repo => {
+    repositories.slice(0, 6).forEach(repo => {
         const repoBox = document.createElement('div');
         repoBox.classList.add('repo-box');
         
@@ -107,7 +107,8 @@ const displayRepositories = (repositories) => {
 const formsubmit = () => {
     const searchvalue = document.querySelector("#searchvalue")
     if(searchvalue != ""){
-        getUser(searchvalue.value)
+        getUser(searchvalue.value);
+        searchvalue.value = "";
     }
     return false;
 }
