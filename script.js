@@ -8,7 +8,6 @@ const getUser = async (username) => {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        console.log(data);
 
         const card = `
         <div class="card">
@@ -75,7 +74,7 @@ const fetchRepositories = async (username) => {
             throw new Error('Network response was not ok');
         }
         const repositories = await response.json();
-        console.log(repositories);
+        repositories.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
         displayRepositories(repositories);
     } catch (error) {
         console.error("Error fetching repositories:", error);
